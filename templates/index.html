@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gem-EI Bot</title>
+    
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <img class="teamImg" src="static/images/teamLogo.jpg">
+    <!-- Music Button on the top-left -->
+    <button id="musicButton" class="music-btn">  🎵  Music  </button>
+    <!-- Pause button-->
+    <button id="pauseMusicButton">Pause Music</button>
+
+    <div class="container2">
+        <button id="jokeButton" class="joke-btn">😂 Tell a Joke</button>
+        <div id="jokePopup" class="popup-box">
+        
+        </div>
+    </div>
+    
+    <div class="container3">
+        <button id="exerciseButton" class="excercise-btn">🏃🏻‍♂ Exercise </button>
+        <div id="exercisePopup" class="exepopup-box">
+    </div>
+</div>
+
+    <!-- Mood Selection Popup -->
+    <div id="moodModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>How's your mood?</h3>
+            <select id="moodSelect">
+                <option value="">Select your mood</option>
+                <option value="happy">Happy</option>
+                <option value="Inspired">Inspired</option>
+                <option value="relaxed">Relaxed</option>
+                <option value="fun">Fun</option>
+                <option value="energetic">Energetic</option>
+                <option value="cool">Cool</option>
+            </select>
+            <button id="playMusicButton">Play Music</button>
+            
+        </div>
+    </div>
+
+    <!-- Chat UI -->
+    <div class="container">
+        <h1 style= "color : black;">Gem-EI Bot</h1>
+        <h3 style= "color : black;">Helping You Through Stressful Times</h3>
+        
+        <!-- Chat Form -->
+        <form action="/" method="POST">
+            <input type="text" name="message" placeholder="Your message..." required>
+            <button type="submit">Chat with Gem-EI</button>
+        </form>
+        
+        <!-- Chat History -->
+        <div class="chat-history">
+            {% for chat in history %}
+                <div class="chat-bubble user-bubble">
+                    <img src="static/images/user.ico" alt="User Icon" class="icon">
+                    <strong>You:</strong> {{ chat.user }}
+                </div>
+                <div class="chat-bubble gem-bubble">
+                    <img src="static/images/gemIconfinal.jpg" alt="Gem-EI Icon" class="icon">
+                    <strong>Gem-EI:</strong> {{ chat.gem }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

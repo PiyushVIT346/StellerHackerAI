@@ -1,0 +1,235 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #4B0082;
+}
+.teamImg {
+    width: 125px;          
+    height: auto;         
+    position: absolute;   
+    top: 20px;            
+    right: 20px;          
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.container {
+    background-color: rgba(255, 239, 150, 0.50);
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* Music button */
+.music-btn {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px 25px; 
+}
+.music-btn:hover {
+    background-color: #9966ff; /* Darker red on hover */
+}
+/* Pause music button */
+#pauseMusicButton {
+    background-color:#8A2BE2 ;
+    position: absolute;
+    top: 56px;
+    left: 170px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+#pauseMusicButton:hover {
+    background-color: #e53935; 
+}
+
+
+.joke-btn {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px 25px; 
+}
+.joke-btn:hover {
+    background-color: #9966ff; 
+}
+.excercise-btn {
+    position: absolute;
+    top: 190px;
+    left: 20px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px 25px; 
+}
+.excercise-btn:hover {
+    background-color: #9966ff; 
+}
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+}
+
+button:hover{
+    background-color: #9966ff; 
+}
+
+.chat-history {
+    margin-top: 20px;
+    text-align: left;
+    
+}
+
+.chat-bubble {
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ffef96;
+    font-size: 16px;
+    word-wrap: break-word;
+    
+}
+
+.user-bubble {
+    background-color:  rgb(52, 5, 110);
+    color: white;
+    text-align: right;
+    opacity: 0.8;
+    
+}
+
+.gem-bubble {
+    background-color: rgb(255, 255, 255);
+    color: rgb(52, 5, 110);
+    font-weight: bold;
+    text-align: left;
+    opacity: 0.8;
+}
+
+
+/* Modal for mood selection */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button and select styling */
+#playMusicButton {
+    margin-top: 10px;
+    padding: 15px 25px; 
+    font-size: 18px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container2 {
+    text-align: center;
+}
+.popup-box {
+    margin-top: 80px;
+    margin-left: 200px;
+    padding: 15px;
+    background-color: #ffef96;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    width: 250px;
+    display: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+.popup-box.show {
+    display: block;
+}
+
+.container3 {
+    text-align: center;
+}
+.exepopup-box {
+    margin-top: 80px;
+    margin-left: 200px;
+    padding: 15px;
+    background-color: #ffef96;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    width: 250px;
+    display: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+.exepopup-box.show {
+    display: block;
+}
